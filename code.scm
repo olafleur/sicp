@@ -33,6 +33,9 @@
 ;1.6
 ;Boucle à l'infini car l'évaluation n'est pas lazy
 
+;1.7
+; TODO
+
 ;1.8
 (define (cube x)
   (* x x x))
@@ -85,3 +88,11 @@
             (ex11 (- n 3))))))
 
 ; itératif
+; TODO
+
+;1.12
+(define (pascal ligne colonne)
+  (cond ((= colonne 1) 1)
+        ((= ligne colonne) 1)
+        (else (+ (pascal (- ligne 1) (- colonne 1))
+                 (pascal (- ligne 1) colonne)))))
